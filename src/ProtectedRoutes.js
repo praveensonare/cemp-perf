@@ -6,49 +6,49 @@
 */
 
 // ProtectedRoutes.js
-import React from 'react';
-import { useEffect, useState } from 'react';
-import HomePage from "./pages/HomePage";
-import { Routes, Route } from "react-router-dom";
-import UserMembers from './pages/RoleManager/UserMembers';
-import Project_Members from './pages/RoleManager/Project_Members';
-import HomePageContent from './pages/RoleManager/HomePageContent'
-import GuidedTourRoleManager from './pages/RoleManager/GuidedTourRoleManager'
-import Projects from './pages/RoleManager/Projects'
-import Dashboard from './pages/Dashboard/Dashboard'
-import Settings from "./pages/Settings";
-import RoleManagers from "./pages/RoleManager/RoleManagers"
-import DeviceHub from './pages/DeviceHub/HomePage_DeviceH'
-import Entitymap from "./pages/DeviceHub/EntityMap"
-import Gateways from '../src/pages/DeviceHub/Gateways'
-import GatewaysDetails from "./pages/DeviceHub/GatewaysDetails";
-import ParameterMapping from "./pages/DeviceHub/ParameterMapping";
-import CompanyProfile from "./pages/ProjectSchematic/CompanyProfile";
-import Status from "./pages/ProjectSchematic/Status";
-import ProjectSchematicStatus from "./pages/ProjectSchematic/ProjectSchematicStatus";
-import Sensors from "./pages/DeviceHub/Sensors";
-import { useContext } from 'react';
-import { Navigate, useLocation } from 'react-router-dom';
+import React, { lazy, Suspense } from 'react';
+import { useEffect, useState, useContext } from 'react';
+import { Routes, Route, Navigate } from "react-router-dom";
 import { AuthContext } from './AuthProvider';
 //RBAC
 import { useDispatch, useSelector } from "react-redux";
 import { fetchPermissions } from "./features/permissions/permissionsSlice";
 import { fetchrole } from "./features/permissions/userroleSlice";
 import { Spin } from 'antd';
-import ProjectSchematicSetting from './pages/Setting/ProjectSchematicSetting';
-import DeviceController from './pages/DeviceController';
-import AdminDashboard from './pages/EnergyTrading/AdminDashboard';
-import TradingView from './pages/EnergyTrading/TradingView'
-import ProfileManager from './pages/EnergyTrading/ProfileManager';
-import ETMenu1 from './pages/EnergyTrading/ETMenu1';
-import ETMenu2 from './pages/EnergyTrading/ETMenu2';
-import ETHubMenu1 from './pages/ETHub/ETHubMenu1';
-import ETHubMenu2 from './pages/ETHub/ETHubMenu2';
-import Marketplace from './pages/ETHub/Marketplace';
-import MyProfile from './pages/ETHub/MyProfile';
-import Wallet from './pages/ETHub/Wallet';
-import MyTransactions from './pages/ETHub/MyTransactions';
-import Alarms from './pages/Alarms/Alarms';
+
+// Lazy load all page components for better performance
+const HomePage = lazy(() => import("./pages/HomePage"));
+const UserMembers = lazy(() => import('./pages/RoleManager/UserMembers'));
+const Project_Members = lazy(() => import('./pages/RoleManager/Project_Members'));
+const HomePageContent = lazy(() => import('./pages/RoleManager/HomePageContent'));
+const GuidedTourRoleManager = lazy(() => import('./pages/RoleManager/GuidedTourRoleManager'));
+const Projects = lazy(() => import('./pages/RoleManager/Projects'));
+const Dashboard = lazy(() => import('./pages/Dashboard/Dashboard'));
+const Settings = lazy(() => import("./pages/Settings"));
+const RoleManagers = lazy(() => import("./pages/RoleManager/RoleManagers"));
+const DeviceHub = lazy(() => import('./pages/DeviceHub/HomePage_DeviceH'));
+const Entitymap = lazy(() => import("./pages/DeviceHub/EntityMap"));
+const Gateways = lazy(() => import('./pages/DeviceHub/Gateways'));
+const GatewaysDetails = lazy(() => import("./pages/DeviceHub/GatewaysDetails"));
+const ParameterMapping = lazy(() => import("./pages/DeviceHub/ParameterMapping"));
+const CompanyProfile = lazy(() => import("./pages/ProjectSchematic/CompanyProfile"));
+const Status = lazy(() => import("./pages/ProjectSchematic/Status"));
+const ProjectSchematicStatus = lazy(() => import("./pages/ProjectSchematic/ProjectSchematicStatus"));
+const Sensors = lazy(() => import("./pages/DeviceHub/Sensors"));
+const ProjectSchematicSetting = lazy(() => import('./pages/Setting/ProjectSchematicSetting'));
+const DeviceController = lazy(() => import('./pages/DeviceController'));
+const AdminDashboard = lazy(() => import('./pages/EnergyTrading/AdminDashboard'));
+const TradingView = lazy(() => import('./pages/EnergyTrading/TradingView'));
+const ProfileManager = lazy(() => import('./pages/EnergyTrading/ProfileManager'));
+const ETMenu1 = lazy(() => import('./pages/EnergyTrading/ETMenu1'));
+const ETMenu2 = lazy(() => import('./pages/EnergyTrading/ETMenu2'));
+const ETHubMenu1 = lazy(() => import('./pages/ETHub/ETHubMenu1'));
+const ETHubMenu2 = lazy(() => import('./pages/ETHub/ETHubMenu2'));
+const Marketplace = lazy(() => import('./pages/ETHub/Marketplace'));
+const MyProfile = lazy(() => import('./pages/ETHub/MyProfile'));
+const Wallet = lazy(() => import('./pages/ETHub/Wallet'));
+const MyTransactions = lazy(() => import('./pages/ETHub/MyTransactions'));
+const Alarms = lazy(() => import('./pages/Alarms/Alarms'));
 
 function ProtectedRoutes() {
     const { isAuthenticated, isLoading } = useContext(AuthContext);
@@ -87,27 +87,33 @@ function ProtectedRoutes() {
     }, [dispatch]);
 
 
+    // Loading fallback component for lazy-loaded routes
+    const LoadingFallback = () => (
+        <div
+            style={{
+                position: "fixed",
+                top: 0,
+                left: 0,
+                width: "100vw",
+                height: "100vh",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                backgroundColor: "#fff",
+                zIndex: 9999,
+            }}
+        >
+            <Spin size="large" />
+        </div>
+    );
+
     return (
         isLoadingPermissions || isLoadingRole ? (
-            <div
-                style={{
-                    position: "fixed",
-                    top: 0,
-                    left: 0,
-                    width: "100vw",
-                    height: "100vh",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    backgroundColor: "#fff",
-                    zIndex: 9999,
-                }}
-            >
-                <Spin size="large" />
-            </div>
+            <LoadingFallback />
         ) : (
             //These are the routes that are protected and can only be accessed by the authenticated users.
-            <Routes>
+            <Suspense fallback={<LoadingFallback />}>
+                <Routes>
                 <Route path="/project-sites" element={isLoading ? null : isAuthenticated ? <HomePage /> : <Navigate to="/" />} />
 
                 <Route path="/dashboard-configurations" element={isLoading ? null : isAuthenticated ? (canClickOnSettingsInSidePane || userRole === 'SuperAdmin') ? <Settings /> : <Navigate to="/unauthorized" /> : <Navigate to="/" />} />
@@ -183,7 +189,8 @@ function ProtectedRoutes() {
                 <Route path="/project-sites/:projectSiteName/schematic-status" element={isLoading ? null : isAuthenticated ? (canClickonProjectSchematicInSidePane || userRole === 'SuperAdmin') ? <ProjectSchematicStatus /> : <Navigate to="/unauthorized" /> : <Navigate to="/" />} />
 
                 <Route path="/project-sites/:projectSiteName/PSsetting" element={isLoading ? null : isAuthenticated ? (canClickonProjectSchematicInSidePane || userRole === 'SuperAdmin') ? <ProjectSchematicSetting /> : <Navigate to="/unauthorized" /> : <Navigate to="/" />} />
-            </Routes>
+                </Routes>
+            </Suspense>
         )
     );
 }
