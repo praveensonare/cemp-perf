@@ -1,0 +1,30 @@
+/*
+ This CSS code is responsible for styling the SesnsorType page.
+  Author : Arpana Meshram
+  Date : 12-08-2023   
+*/
+
+.paramterDiv {
+    height: 300px;
+    overflow-x: hidden;
+    width: 105%;
+    overflow-y: auto;
+     scrollbar-width: thin; /* For Firefox */
+  }
+
+  .paramterDiv::-webkit-scrollbar {
+    width: 5px; /* For Chrome, Safari, and Opera */
+  }
+ 
+.userdetail .paramterDiv .css-10botns-MuiInputBase-input-MuiFilledInput-input , .userdetail .paramterDiv .css-d9oaum-MuiSelect-select-MuiInputBase-input-MuiFilledInput-input{
+  padding-top: 10px !important;
+}
+.parametrButton{
+  padding: 0px;
+}
+.paramterDiv .css-2bxn45 , .paramterDiv .css-17gq4vl{
+  padding: 10px 12px 8px !important; 
+}
+.swal2-container {
+  z-index: 1560 !important;
+}

@@ -1,0 +1,116 @@
+{
+    "nodes": [
+      {
+        "id": "1",
+        "type": "line",
+        "position": { "x": 50, "y": 200 },
+        "data": {  "color": "Blue" , "src":"/minus.png"},
+        "draggable": false
+
+      },
+      {
+        "id": "2",
+        "type": "line",
+       "position": { "x": 700, "y": 200 },
+        "data": { "color": "Blue" , "src":"/minus.png"},
+        "draggable": false
+      },
+      {
+        "id": "nodeT",
+        "type": "lineDotTop",
+        "position": { "x": 80, "y": 200 },
+        "data": {  "color": "Blue" , "src":"/circle-dashed.jpg"}
+      },
+        {
+          "id": "nodeB",
+          "type": "lineDotBottom",
+          "position": { "x": 150, "y": 200 },
+          "data": {  "color": "Blue" , "src":"/circle-dashed.jpg"}
+        },
+        {
+          "id": "solar",
+          "type": "circularNodeR",
+          "position": {"x": 46.00577649467979, "y": 31.31890429238581},
+          "data": {  "color": "Blue" , "src":"/solar.png"}
+        },
+        {
+          "id": "solarPV",
+          "type": "circularNodeL",
+          "position": {  "x": 115, "y": 309  },
+          "data": {  "color": "Blue" , "src":"/solarPV.png"}
+        },
+         {
+        "id": "nodeT1",
+        "type": "lineDotTop",
+        "position": { "x": 220, "y": 200 },
+        "data": {  "color": "Blue" , "src":"/circle-dashed.jpg"}
+      },
+        {
+          "id": "nodeB1",
+          "type": "lineDotBottom",
+          "position": { "x": 300, "y": 200 },
+          "data": {  "color": "Blue" , "src":"/circle-dashed.jpg"}
+        },
+        {
+          "id": "DGset",
+          "type": "circularNodeR",
+          "position": {"x": 185, "y": 31.31890429238581},
+          "data": {  "color": "Blue" , "src":"/DGset.png"}
+        },
+        {
+          "id": "Echarging",
+          "type": "circularNodeL",
+          "position": {  "x": 265, "y": 309  },
+          "data": {  "color": "Blue" , "src":"/Echarging.png"}
+        },
+        {
+          "id": "nodeT2",
+          "type": "lineDotTop",
+          "position": { "x": 385, "y": 200 },
+          "data": {  "color": "Blue" , "src":"/circle-dashed.jpg"}
+        },
+          {
+            "id": "nodeB2",
+            "type": "lineDotBottom",
+            "position": { "x": 460, "y": 200 },
+            "data": {  "color": "Blue" , "src":"/circle-dashed.jpg"}
+          },
+          {
+            "id": "battery",
+            "type": "circularNodeR",
+            "position": {"x": 350, "y": 37.31890429238581 },
+            "data": {  "color": "Blue" , "src":"/battery.png"}
+          },
+          {
+            "id": "fuel",
+            "type": "circularNodeL",
+            "position": { "x": 425, "y": 308 },
+            "data": {  "color": "Blue" , "src":"/fuel.png"}
+          },
+          {
+            "id": "nodeT3",
+            "type": "lineDotTop",
+            "position": { "x": 540, "y": 200 },
+            "data": {  "color": "Blue" , "src":"/circle-dashed.jpg"}
+          },
+            {
+              "id": "nodeB3",
+              "type": "lineDotBottom",
+              "position": { "x": 630, "y": 200 },
+              "data": {  "color": "Blue" , "src":"/circle-dashed.jpg"}
+            },
+            {
+              "id": "wind",
+              "type": "circularNodeR",
+              "position": {"x": 505, "y": 30.31890429238581},
+              "data": {  "color": "Blue" , "src":"/wind.png"}
+            },
+            {
+              "id": "Eload",
+              "type": "circularNodeL",
+              "position": { "x": 595, "y": 310 },
+              "data": {  "color": "Blue" , "src":"/Eload.png"}
+            }
+
+    ]
+  }

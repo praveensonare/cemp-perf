@@ -1,0 +1,63 @@
+.image_nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.dropdown_area {
+  height: 45px;
+  padding: 3px 12px;
+  background: #ffca29;
+  margin-left: 20px;
+  border-radius: 8px;
+  border: 1px solid var(--components-fieldcontrol-border-color, #aeb3b7);
+}
+
+.infosys_logo {
+  margin-left: 30px;
+}
+
+.search {
+  margin-left: 30px;
+}
+
+.nav {
+  text-decoration: none;
+  color: #637381;
+}
+
+.Profile_Dropdown {
+  /* width: 157px; ;
+    height:35px ; */
+  display: flex;
+  padding: 5px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: var(--1, 8px);
+  box-shadow: black;
+  background: #ffca29;
+  margin: 6px;
+}
+
+.user_profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 304px;
+  margin-top: 90px;
+}
+
+.list-container {
+  overflow: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.list-container::-webkit-scrollbar {
+  display: none;
+}

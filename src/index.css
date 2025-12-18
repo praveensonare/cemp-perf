@@ -1,0 +1,217 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%); */
+  /* background-color: #F4F5FA !important; */
+  /* background-color: rgb(249, 250, 251) !important; */
+  /* background-color: #f9fafb !important; */
+  height: 100vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+:root {
+  --amplify-primary-color: #6e0e2e;
+  --amplify-primary-tint: #3f6060;
+  --amplify-primary-shade: #2dba89;
+  --amplify-background-color: #e0faf4;
+}
+
+.card
+{
+  background-color: #f9fafb !important;
+}
+
+.flexcentere {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thick-arrow-down {
+  width: 20px;
+  height: 20px;
+  border: 5px solid #ff2626;
+  border-left: 0;
+  border-top: 0;
+
+  transform: rotate(45deg);
+}
+
+.thick-arrow-up {
+  width: 20px;
+  height: 20px;
+  border: 5px solid #ff2626;
+  border-left: 0;
+  border-top: 0;
+  transform: rotate(225deg);
+}
+
+
+/* .side_padding {
+  margin: 20px !important;
+  border: 1px solid red;
+} */
+
+.side_padding {
+  margin-top: 10px;
+}
+
+@media(min-width:1200) {
+  .container {
+    max-width: 1366px !important;
+  }
+}
+
+
+/* @media (min-width: 1200px) */
+
+
+.buttonright {
+  display: flex;
+  justify-content: right;
+  margin-bottom: 1rem;
+}
+
+.button_color {
+  background-color: #33404de6 !important;
+  border-radius: 8px !important;
+  color: white !important;
+  font-family: Inter !important;
+  font-size: 16px !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: normal !important;
+}
+
+
+.amplify-button--primary {
+  border-radius: 4px;
+  border: none;
+  background-color: var(--primary, #5570F1) !important;
+}
+
+#cardBody {
+  position: relative;
+  z-index: 5 !important;
+}
+
+.dataGridSearch
+{
+  line-height: 1.4375em;
+    /* font-size: 1rem; */
+    /* font-family: "Public Sans", sans-serif; */
+    font-weight: 400;
+    color: rgb(33, 43, 54);
+    box-sizing: border-box;
+    cursor: text;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+    border-radius: 8px !important;
+    padding-left: 14px;
+    border: none !important;
+    /* padding-left: 0px !important; */
+}
+
+.dataGridSearchinput
+{
+  font: inherit;
+    letter-spacing: inherit;
+    color: currentcolor;
+    border: 0px;
+    box-sizing: content-box;
+    background: none;
+    height: 1.4375em;
+    margin: 0px;
+    -webkit-tap-highlight-color: transparent;
+    display: block;
+    /* min-width: 0px; */
+    /* width: 100%; */
+    animation-name: mui-auto-fill-cancel;
+    animation-duration: 10ms;
+    padding: 16.5px 24px 16.5px 0px;
+}
+
+.data-grid .MuiDataGrid-row.Mui-selected {
+  background-color: #ff1e1e; /* Change this to your desired color */
+}
+.datagridIcon_div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  /* color: #637381; */
+  color: #2586d5;
+}
+.datagridIcon_img {
+  position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-family: Inter, sans-serif;
+    line-height: 1;
+    border-radius: 40px;
+    overflow: hidden;
+    user-select: none;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0px;
+    background-color: rgb(245, 245, 245);
+    /* color: rgb(133, 102, 102) !important; */
+    height: 40px;
+    width: 40px;
+}
+
+.datagridIcon_img1 {
+  position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-family: Inter, sans-serif;
+    line-height: 1;
+    border-radius: 40px;
+    overflow: hidden;
+    user-select: none;
+    font-size: 80px;
+    font-weight: 600;
+    letter-spacing: 0px;
+    background-color: rgb(245, 245, 245);
+    /* color: rgb(133, 102, 102) !important; */
+    height: 50px;
+    width: 40px;
+}
+
+
+/* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+.data-grid::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Internet Explorer and Edge */
+.data-grid {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.notification-badge{
+ 
+  position:absolute;
+  left: 27px;
+ bottom: 20px;
+}

@@ -1,0 +1,22 @@
+.typography {
+    padding: 20px 0px 0px 20px;
+}
+
+.cardBox{
+    width: 800px;
+}
+
+.credsValues {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    gap: 10px;
+}
+
+.credentials-details {
+    margin-left: 60px;
+}
+
+.error-text {
+    color: red;
+}

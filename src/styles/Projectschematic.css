@@ -1,0 +1,67 @@
+.card-img {
+    border: 2px solid grey;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    /* background-color: #eee; */
+    background-color: white;
+    padding: 10px;
+    margin: 5px;
+    /* width: 150px; */
+}
+
+.card-img p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.cardcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.cardcontainer_status {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nodes-popup {
+    position: fixed;
+    /* width: 10VW;
+    height: 17vh; */
+    background-color: white;
+    border: 2px solid green;
+    /* z-index: 9999; */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nodes-popup p {
+    font-size: 13px;
+    padding: none;
+    margin-bottom: 0px !important;
+}
+
+.reactflow-wrapper{
+    height: 50vh;
+    /* background-color: yellow; */
+}
+
+@media screen and (min-width: 1280px) {
+    .reactflow-wrapper {
+        height: 56vh;
+        /* background-color: rgb(36, 36, 35); */
+    }
+
+    .card-img {
+        margin: 2px;
+    }
+
+}
+

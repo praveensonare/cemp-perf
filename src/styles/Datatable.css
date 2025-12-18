@@ -1,0 +1,13 @@
+
+.data-table-extensions {padding: 20px 0px;}
+.data-table-extensions > .data-table-extensions-filter {
+   
+    position: relative;
+}
+.data-table-extensions > .data-table-extensions-filter > .filter-text {
+    border: 0;
+    border-bottom: 1px solid #f5f5f5;
+    outline: none;
+    padding: 8px 34px;
+}
+

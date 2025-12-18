@@ -1,0 +1,128 @@
+/*
+ This CSS code is responsible for styling the  Prijectsite home page.
+  Author : Arpana Meshram
+  Revision: 1.0 - 17-07-2021 : UI Creation.(shweta vyas)
+*/
+.card-container {
+  border: 3px solid #fff;
+  border-radius: 4px;
+  padding: 5px;
+  margin-bottom: 20px;
+  transition: 0.2s all ease-in-out;
+  box-shadow: 0 5px 12px 0 rgb(3 3 3 / 31%);
+  background-color: #fff;
+}
+
+.card-container:hover {
+  border: 3px solid #17A1FA;
+  transform: scale(1.04);
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* to ensure text doesn't overflow */
+  min-width: 0;
+  /* padding: 0px !important; */
+}
+
+.Cardimg {
+  height: 100px;
+  width: 140px;
+  border-radius: 50%;
+  border: 1px solid #eee;
+}
+
+.card-title {
+  color: #3E4958;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 11px;
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+.card-link {
+  float: right;
+  color: #17A1FA;
+  font-size: 12px;
+}
+
+.card-body p {
+  font-size: 11px;
+  font-weight: 600;
+  color: #3E4958;
+  margin-bottom: 1px
+}
+
+.card-text {
+  color: #8E8E8E !important;
+  margin-bottom: 5px !important;
+}
+
+.map-container {
+  height: 85vh;
+  width: 100%;
+}
+.flex-conrtaine{
+  height: 85vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+.flex-conrtaine::-webkit-scrollbar {
+	width: 5px;
+	/* background-color: #9e9d9d; */
+}
+/* .flex-conrtaine::-webkit-scrollbar-thumb {
+	background-color: #9e9d9d;
+} */
+
+.card-container .card-body .button_warning{
+  background-color: #FFCA29 !important;
+  color: #130F26 !important;
+  cursor: pointer !important;
+  margin-top: 5px;
+  padding: 1px;
+
+}
+
+.projectSearch{
+  margin: 4px 16px;
+  width: 92%;
+  outline: npn;
+  border: none;
+  padding: 10px;
+  border-radius: 18px;
+  outline: none;
+  border: 2px solid #707c8787;
+}
+.searchContainer {
+  position: relative;
+}
+
+.projectSearch {
+  padding-left: 30px; /* Adjust as needed */
+}
+
+.searchIcon {
+  position: absolute;
+  margin-right: 5px;
+  left: 27px; /* Adjust as needed */
+  top: 50%;
+  transform: translateY(-50%);
+  color:#637381;
+  font-size: 13px;
+}
+
+/* media-queries for screen 1140px and above (1200-1300)*/
+/* @media screen and (min-width: 1140px) {
+  .card-title {
+    width: 120px;
+  }
+} */

@@ -1,0 +1,64 @@
+
+.form_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 40px 20px 40px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../assets/brand/CardImg.png') ;
+    background-position: center;
+    background-size: cover;
+
+   
+}
+
+/* header img */
+.amplify-image {
+    margin-bottom: -120px;
+}
+
+[data-amplify-authenticator] [data-amplify-form] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #FFF;
+    margin-left: 48px;
+    /* padding-bottom: -80px; */
+    width: 375px;
+    height: 350px;
+    padding: var(--amplify-components-authenticator-form-padding);
+}
+
+*{
+    border-radius: 6px;
+}
+
+.amplify-button--primary{
+    margin-bottom:-100px
+}
+
+/* back to sign in button */
+.amplify-button--link {
+    margin-top: 100px;
+    margin-bottom: -70px;
+}
+
+/* //change password */
+ [data-amplify-router]{
+
+/* display: flex;
+justify-content: center;
+align-items: center; */
+}
+

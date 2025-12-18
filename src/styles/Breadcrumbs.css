@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+.breadcrumb .MuiBreadcrumbs-ol {
+  padding: 3px 6px;
+  margin-left: 12px;
+  margin-bottom: 10px;
+  background-color: #b2aeae2e;
+  border-radius: 8px;
+}
+
+.breadcrumb .MuiBreadcrumbs-ol .MuiLink-root {
+  box-sizing: border-box;
+  text-decoration: none;
+  padding: 4px 4px;
+  font-weight: 600 !important;
+  font-family: Arial, sans-serif; 
+  color: #777;
+}
+
+.breadcrumb .MuiBreadcrumbs-ol .MuiLink-root:hover {
+  /* text-decoration: underline; */
+  background-color: #D0ECFE;
+  color: #2162a2 !important;
+  border-radius: 6px;
+  margin: 0;
+}
+
+.active-link {
+  padding: 2px;
+  /* font-size: 0.875rem !important; */
+  font-weight: 400 !important;
+}

@@ -1,0 +1,19 @@
+#AddNewBtn {
+    display: inline-flex;
+    padding: 5px;
+    margin-left: 800px;
+    align-items: center;
+    border-radius: 4px;
+    background: #FFCA29;
+    color: #130F26;
+    font-family: Inter;
+    font-weight: 500;
+}
+.table-card{
+    display: flex;
+    align-items: center;
+}
+.card{
+    /* display: flex;
+   width: 1030px; */  
+}

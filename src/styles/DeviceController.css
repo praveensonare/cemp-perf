@@ -1,0 +1,18 @@
+/* Custom scrollbar styles */
+.custom-scrollbar .MuiDataGrid-root .MuiDataGrid-virtualScroller::-webkit-scrollbar {
+    height: 6px; /* Adjust the height of the horizontal scrollbar */
+  }
+  
+  .custom-scrollbar .MuiDataGrid-root .MuiDataGrid-virtualScroller::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2); /* Adjust the color of the scrollbar thumb */
+    border-radius: 6px; /* Adjust the border radius of the scrollbar thumb */
+  }
+  
+  .custom-scrollbar .MuiDataGrid-root .MuiDataGrid-virtualScroller::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.1); /* Adjust the color of the scrollbar track */
+  }
+
+  /* Hide vertical scrollbar */
+.custom-scrollbar .MuiDataGrid-root .MuiDataGrid-virtualScroller::-webkit-scrollbar:vertical {
+    display: none; /* Hide the vertical scrollbar */
+  }

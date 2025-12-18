@@ -1,0 +1,98 @@
+.stepperlabel {
+  display: block !important;
+}
+.stepperlabel span {
+  justify-content: center !important;
+  margin-top: 10px !important;
+}
+.userdetail {
+  width: 100% !important;
+}
+.userdetail h6 {
+  font-weight: bold;
+  border-top: 1px solid #eeeef0;
+  border-bottom: 1px solid #eeeef0;
+  margin: 30px 0px !important;
+}
+.modelDialog {
+  padding: 30px 40px !important;
+  width: 330px !important;
+ 
+}
+.MuiStepConnector-lineHorizontal {
+  margin-top: -10px !important;
+}
+option{
+
+}
+.selectType{
+  color: #FD883B  !important;
+  background-color: #F7DECE;
+  font-size: 12px;
+  margin: 0px 10px;
+  padding: 2px;
+}
+option {
+  padding: 20px 10px !important;
+  margin: 10px !important;
+  text-transform: capitalize;
+}
+
+/* Css for SENSOR LIST */
+
+.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-active {
+  color:#5570F1 !important;
+}
+
+.H1{
+  font-size: 20px;
+  font-weight: 500;
+  padding: 20px 0px 10px 5px;
+}
+
+.btns{
+ display: flex;
+ gap: 65px;
+ margin-top: 20px;
+ justify-content: center;
+}
+
+#backBtn{
+  display: flex;
+  width: 158px;
+  height: 44px;
+  padding: 10px;
+  align-items: center;
+  gap: 5px;
+  border-radius: 4px;
+  /* color: #130F26;
+  background: #989BA6; */
+  border-radius: var(--borderRadius, 4px);
+background: var(--action-disabled-background, rgba(0, 0, 0, 0.12));
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  border: none
+}
+
+#nextBtn{
+  display: flex;
+  width: 158px;
+  height: 44px;
+  padding: 10px;
+  align-items: center;
+  gap: 5px;
+  border-radius: 4px;
+  background: var(--Primary, #5570F1);
+  color:white;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  border: none
+}
+
+.heirarchy{
+  margin: 30px 0px 40px 8px;
+}

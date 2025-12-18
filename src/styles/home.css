@@ -1,0 +1,233 @@
+/*
+ This CSS code is responsible for styling the home page.
+  Author : Arpana Meshram 
+*/
+.cardbox {
+  box-shadow: 0 0.46875rem 2.1875rem rgba(90,97,105,.1), 0 0.9375rem 1.40625rem rgba(90,97,105,.1), 0 0.25rem 0.53125rem rgba(90,97,105,.12), 0 0.125rem 0.1875rem rgba(90,97,105,.1);
+  border-radius: 8px;
+  border: 1px solid #eee !important;
+  background-color: #fff;
+  height: 362px;
+}
+.cardbox-table{
+  border: 1px solid #eee !important;
+  background-color: #fff;
+  box-shadow: 0 0.46875rem 2.1875rem rgba(90,97,105,.1), 0 0.9375rem 1.40625rem rgba(90,97,105,.1), 0 0.25rem 0.53125rem rgba(90,97,105,.12), 0 0.125rem 0.1875rem rgba(90,97,105,.1);
+  border-radius: 8px;
+  height: auto;
+}
+.borderBottom {
+  border-bottom: 2px solid #eee !important;
+  padding-bottom: 10px;
+}
+
+.main_content {
+  background-color: #f4f5fa;
+}
+
+.List ul {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+}
+.List ul li {
+  padding: 4px;
+  /* background-color: #f9f9f9; 
+  border: 1px solid #ddd; 
+  border-radius: 5px;   */
+}
+
+.List ul li div {
+  display: flex;
+  align-items: center;
+}
+
+.List ul .listdesign {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #007bff; /* Blue color */
+  border-radius: 50%; /* Circle shape */
+  margin-right: 10px; /* Space between circle and text */
+  position: relative; /* Required for positioning the pseudo-element */
+}
+.List ul li:nth-child(1) .listdesign::before,
+.List ul li:nth-child(2) .listdesign::before {
+  content: '';
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 24px;
+    background-color: #c5c0c0;
+    transform: translate(-50%, 40%);
+}
+
+.Projectlist {
+  border-bottom: 2px solid #eee;
+  padding: 5px 20px;
+  list-style-type: none;
+}
+
+.textsmall {
+  color: grey;
+  font-size: 12px;
+}
+.card-entity{
+  height: 65vh;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin; 
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: rgba(145, 158, 171, 0.08) 0px 0px 2px 0px,
+    rgba(145, 158, 171, 0.08) 0px 12px 24px -4px;
+}
+.card-entity::-webkit-scrollbar {
+  width: 5px; /* For Chrome, Safari, and Opera */
+}
+
+.cardHeight {
+  height: 240px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin; /* For Firefox */
+  padding: 1px 20px;
+}
+.cardHeight::-webkit-scrollbar {
+  width: 5px; /* For Chrome, Safari, and Opera */
+}
+.Projectlistname{
+ width: 88% !important;
+}
+.textname {
+  margin-bottom: 0;
+  font-size: 17px;
+  font-weight: 500;
+  white-space: nowrap;
+  width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.Imground {
+  height: 50px;
+  width: 50px;
+  padding: 1px;
+  border-radius: 50%;
+  margin-right: 15px;
+  border: 1ps solid #e1dddd;
+}
+
+.entityList {
+  padding: 0px 30px;
+  list-style-type: none;
+}
+
+.entityList li {
+  border-top: 2px solid #0484bd;
+  background: #D6F4F9;
+  color:#0484bd ;
+  padding: 6px 15px;
+  margin-top: 10px;
+  width: auto;
+}
+
+.sensorListLi {
+  border-top: 2px solid #0484bd;
+  background: #D6F4F9;
+  color:#0484bd ;
+  padding: 10px 15px;
+}
+
+.collapseW {
+  width: fit-content !important;
+}
+
+.entityList li:before {
+  content: "-->";
+  display: block;
+  /* width: 2px; */
+  height: 5px;
+  color: #abafb1;
+  margin-left: -37px;
+}
+
+.entityHeading {
+  border-top: 2px solid #d9aa1b;
+  background: #FFF1D6;
+  color: #d9aa1b;
+  padding: 10px 15px;
+  margin-top: 5px;
+  width: fit-content;
+}
+
+.Listdiv {
+  border-left: 2px solid #abafb1;
+  padding: 10px 0px 0px 20px;
+}
+
+.loaderList {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #1976d2;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  position: relative;
+  left: 42%;
+  top: 30%;
+}
+
+.cardbox-table .MuiTablePagination-root p {
+  margin-top: 15px !important;
+}
+.listdesign{
+  border-width: 2px;
+  padding: 4px;
+  border-radius: 50%;
+  margin: 11.5px 0px;
+  background-color: green;
+}
+.listdesign::after{
+  width: 2px;
+  height: 10px;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  background-color: gray;
+}
+
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.Listdevice ul {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0;
+  margin: 0;
+}
+.Listdevice ul li {
+  position: relative; /* Required for positioning the pseudo-element */
+  padding-left: 25px; /* Space for the icon */
+  margin-bottom: 10px; /* Space between list items */
+}
+
+.Listdevice ul li::before {
+  content: '>';
+  position: absolute;
+  left: -6px;
+  top: 50%;
+  transform: translateY(-56%);
+  color: #007bff;
+  font-size: 25px;
+}

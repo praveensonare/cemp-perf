@@ -1,0 +1,99 @@
+.projectSiteName {
+    margin: 5px;
+    padding: 15px 0px 0px 15px;
+}
+
+
+.Project_Heading {
+    color: #111827;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: normal;
+    padding-bottom: 10px;
+
+}
+
+.Project_Popup {
+    margin-top: 15px;
+}
+
+.MuiInputBase-input {
+    background: '#F6F7FB' !important;
+}
+
+.MuiTextField-root {
+    background: '#F6F7FB' !important;
+}
+
+.Project_upload {
+    color: #17A1FA;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 175%;
+    /* 28px */
+    letter-spacing: 0.15px;
+}
+
+.project_name {
+    color: var(--text-primary, #111827) !important;
+    border-color: #111827;
+    font-family: Inter;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+
+.parameters {
+    padding: 20px;
+}
+
+.Rm_Breadcrumbs {
+    margin-bottom: 8px;
+    margin-top: -20px;
+    padding-top: 10px;
+}
+
+.Sensors_Dropdown {
+    text-decoration: none;
+}
+
+.Parameters_Header {
+    color: var(--Primary, #5570F1);
+    text-align: center;
+}
+
+.parameter_modal {
+    display: inline-flex;
+    padding: 28px var(--3, 24px);
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    border-radius: var(--borderRadius, 4px);
+    background: #FFF;
+    width: 806px !important;
+    /* height: 300px !important; */
+}
+
+.params {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 8px;
+   
+}
+
+.params-content {
+    display: flex;
+   padding: 1px;
+}
+
+.scrollable-content {
+    max-height: 300px; /* Set the desired height for the scrollable area */
+    overflow-y: auto;
+    overflow-x: hidden;
+  }

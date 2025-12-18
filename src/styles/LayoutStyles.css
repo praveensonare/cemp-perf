@@ -1,0 +1,123 @@
+/*
+ This CSS code is responsible for styling the layout of the project.
+  Author : Shweta Vyas
+*/
+
+.main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    overflow: hidden;
+}
+
+.layout {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+.body-content {
+    padding: 0px 15px;
+    border-radius: var(--none, 0px);
+    /* background: #F4F5FA; */
+    background: #f9fafb;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+
+.header {
+    height: 10vh;
+    margin-bottom: 20px;
+    box-shadow: 0 0 2px gray;
+    background-color: #fff;
+}
+
+.logo {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.logo h6 {
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.menu {
+    margin-top: 50px;
+}
+
+.menu-item {
+    margin-top: 40px;
+}
+
+.menu-item a {
+    color: rgb(242, 52, 52) !important;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.menu-item i {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 20px;
+    padding: 10px;
+}
+
+
+.active {
+    background-color: #D0ECFE;
+    color: #2162a2 !important;
+    border-radius: 6px;
+    margin: 8px;
+}
+
+.active:hover {
+    background-color: #abd6f1;
+  }
+
+.active .headersIcon {
+    color: #2162a2;
+    font-weight: bold !important;
+}
+
+.active a,
+.active i {
+    color: rgb(255, 255, 255);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    justify-content: flex-end;
+    margin: 0 15px;
+}
+
+
+
+.header-content i {
+    margin-right: 20px;
+    font-size: 1.2rem;
+}
+
+
+
+.header-content a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: blue;
+    margin: 0 10px;
+    text-transform: uppercase;
+
+}
