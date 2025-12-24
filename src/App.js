@@ -4,68 +4,42 @@
         25-02-2024 : modified the code base, moved private routes to another component and added the AuthProvider component to check the authentication state of the user.     
 */
 import { Routes, Route } from "react-router-dom";
-import { lazy, Suspense } from "react";
-import { Spin } from "antd";
+import Login from "./pages/Login";
+import ForgotPassword from "./pages/ForgotPassword";
+import ResetPassword from "./pages/ResetPassword";
+import Unauthorized from "./components/common/Unauthorized";
 import { ProjectProvider } from "./ProjectContext";
 import setupAxiosInterceptors from './axiosSetup';
 import { AuthProvider } from './AuthProvider';
+import ProtectedRoutes from './ProtectedRoutes';
 import { NodesProvider } from './NodesContext';
 import './App.css';
-
-// Lazy load all components for better performance
-const Login = lazy(() => import("./pages/Login"));
-const ForgotPassword = lazy(() => import("./pages/ForgotPassword"));
-const ResetPassword = lazy(() => import("./pages/ResetPassword"));
-const Unauthorized = lazy(() => import("./components/common/Unauthorized"));
-const ProtectedRoutes = lazy(() => import('./ProtectedRoutes'));
 
 // Set up Axios interceptors
 setupAxiosInterceptors();
 
-// Loading fallback component
-const LoadingFallback = () => (
-  <div
-    style={{
-      position: "fixed",
-      top: 0,
-      left: 0,
-      width: "100vw",
-      height: "100vh",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      backgroundColor: "#fff",
-      zIndex: 9999,
-    }}
-  >
-    <Spin size="large" />
-  </div>
-);
-
 function App() {
   return (
     <div >
-      <NodesProvider>
-        <ProjectProvider>
-          <div className='App'>
-            <Suspense fallback={<LoadingFallback />}>
-              <Routes>
-                {/* Public Routes */}
-                <Route path="/" element={<Login />} />
-                <Route path="/forgotPassword" element={<ForgotPassword />} />
-                <Route path="/resetPassword" element={<ResetPassword />} />
-                <Route path="/unauthorized" element={<Unauthorized />} />
+         <NodesProvider>
+      <ProjectProvider>
+        <div className='App'>
+          <Routes>
+            {/* Public Routes */}
+            <Route path="/" element={<Login />} />
+            <Route path="/forgotPassword" element={<ForgotPassword />} />
+            <Route path="/resetPassword" element={<ResetPassword />} />
+            <Route path="/unauthorized" element={<Unauthorized />} />
 
-                {/* Protected Routes */}
-                <Route path="/*" element={
-                  <AuthProvider>
-                    <ProtectedRoutes />
-                  </AuthProvider>
-                } />
-              </Routes>
-            </Suspense>
-          </div>
-        </ProjectProvider>
+            {/* Protected Routes */}
+            <Route path="/*" element={
+              <AuthProvider>
+                <ProtectedRoutes />
+              </AuthProvider>
+            } />
+          </Routes>
+        </div>
+      </ProjectProvider>
       </NodesProvider>
     </div>
   );
